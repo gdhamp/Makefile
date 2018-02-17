@@ -30,6 +30,7 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 	$(MKDIR_P) $(dir $@)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
+print-%  : ; @echo $* = $($*)
 
 .PHONY: clean
 
